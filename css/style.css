@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header .navbar {
+  width: 100%;
+}
+header .navbar div .nav-brand {
+  width: 100%;
+  align-self: center;
+}
+header .navbar div .nav-brand .logo {
+  width: 100%;
+  align-items: center;
+  align-self: center;
+}
+
+body {
+  background-color: #99F2A2;
+}
+
+main .contform {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-color: #C3B1F2;
+  justify-content: space-around;
+  padding: 2%;
+  margin: 2%;
+}
+main .contform form {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-color: #C3B1F2;
+  justify-content: space-around;
+  padding: 2%;
+  margin: 2%;
+}
+main .contform form div {
+  margin: 0.5%;
+  width: 100%;
+  justify-content: center;
+}
+main .contform form div input {
+  background-color: #CDF991;
+  border: transparent;
+  border-width: 0%;
+}
+main .contform form div select {
+  background-color: #CDF991;
+  border-color: transparent;
+}
+
+/**button{
+    background-color:#F2B880;
+    border-radius: 35%;
+    width: 30%;
+    align-self: center;
+    justify-content: center;
+    border-color: transparent;
+    border-width: 0%;
+}**/
+
+/*# sourceMappingURL=style.css.map */

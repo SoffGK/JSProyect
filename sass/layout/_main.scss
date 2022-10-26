@@ -1,0 +1,54 @@
+main{
+    .contform{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        background-color:#C3B1F2;
+        justify-content: space-around;
+        padding: 2%;
+        margin: 2%;
+
+    
+    form{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        background-color:#C3B1F2;
+        justify-content: space-around;
+        padding: 2%;
+        margin: 2%;
+        div{
+            margin: 0.5%;
+            width: 100%;
+            justify-content: center;
+            input{
+                background-color:#CDF991 ;
+                border: transparent;
+                border-width: 0%;
+            }
+            select{
+                background-color:#CDF991 ;
+                border-color: transparent;
+                
+            }
+        
+        }
+        
+    }
+    
+}
+
+
+}
+
+/**button{
+    background-color:#F2B880;
+    border-radius: 35%;
+    width: 30%;
+    align-self: center;
+    justify-content: center;
+    border-color: transparent;
+    border-width: 0%;
+}**/

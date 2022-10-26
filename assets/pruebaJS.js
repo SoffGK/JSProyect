@@ -1,38 +1,79 @@
 let monto_minimo = 1000;
-let cliente = prompt("¡Hola! Ingresa tu nombre")
-let monto = prompt(" Ingresa el monto que te gustaria financiar.");
-let cuotas = prompt("Ingresa en cuantas cuotas te gustaria pagarlo (3,6,12)");
-let calculo = monto * interes();
+let cliente = document.getElementById("inNombre");
+let monto = document.getElementById("inMonto.value");
+let cuotas = document.getElementById("cuotas.value");
+let calculo = monto * interesAplicado();
 let clientes_rechazados = ["Juan", "Raul"];
+let interes = [1.3, 1.5, 1.7, 1.9]
 
-
-
-function interes() {
-    while (cuotas == 3 || 6) {
-        return 1.4
-    };
-    return 1.8
+function interesAplicado() {
+    if (document.getElementById("3c")) {
+        return interes[0]
+    } else if (document.getElementById("6c")) {
+        return interes[1]
+    } else if (document.getElementById("12c")) {
+        return interes[2]
+    } else(document.getElementById("18c")); {
+        return interes[3]
+    }
 };
 
 
 function listadeclientesrechazados() {
-    console.log (clientes_pobres)
-    if (monto > monto_minimo) {
+    if (monto < monto_minimo) {
         clientes_rechazados.push(cliente)
-     }
+    }
 };
 
 
 
 function financiacion() {
-    if (monto >= monto_minimo) {
-        return alert("El valor a devolver es de" + " " + calculo + " " + "en" + " " + cuotas + " " + "de" + " " + calculo / cuotas)
+    let formulario = document.forms['formulario'];
+
+    let monto = formulario['monto'];
+    if (monto.value >= monto_minimo) {
+       document.getElementById("financia").innerHTML = "El valor a devolver es de" + " " + calculo + " " + "en" + " " + cuotas + " " + "de" + " " + calculo / cuotas;
     } else {
-        return alert("Lo sentimos, el monto que ingresaste no cumple con el valor minimo de financiación")
+        document.getElementById("rechaza").innerHTML = "Lo sentimos, el monto que ingresaste no cumple con el valor minimo de financiación";
+    }
+};
+
+
+
+const personas = [
+    new Persona("Juana Pascua")
+];
+
+function clienteRechazado() {
+    let texto = "";
+    for (let persona of personas) {
+        texto += `<li> ${persona.nombre}</li>`;
+    }
+    document.getElementById("personas").innerHTML = texto;
+}
+
+function agregarPersona() {
+
+    const forma = document.forms["formulario"];
+    const nombre = formulario["inNombre"];
+    const persona = new Persona(inNombre.value);
+
+    if (monto < monto_minimo) {
+        personas.push(persona);
+        clienteRechazado();
     }
 };
 
 financiacion();
 
+agregarPersona()
 
 listadeclientesrechazados();
+
+
+/**if (monto > monto_minimo) {
+    clientes_rechazados.push(cliente)
+ }
+ else {
+    alert(clientes_rechazados.toString())
+ } */

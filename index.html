@@ -5,16 +5,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - La Eskina Verde</title>
-   
+    <title>Inicio - Financiaciones Sofí</title>
+    <meta>
+    <meta>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Fredoka+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
-<body>
+<body onload="clienteRechazado()">
     <header>
+        <!-- Barrra de Navegacion -->
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/logoHeader.png" alt="Logo" class="d-inline-block align-text-top logo">
 
+                </a>
+            </div>
+        </nav>
     </header>
     <main>
+        <!--Formulario de Financiacion-->
+        <div class="contform" id="form">
+        <form id="formulario" action="Ingreso de Datos">
+            <div>
+                <label id="nombre" for="Nombre">Nombre y Apellido:</label>
+                <input id="inNombre" type="Nombre">
+            </div>
+            <div>
+                <label id="monto" for="Monto">Monto a financiar:</label>
+                <input id="inMonto" type="Monto">
+            </div>
+            <div>
+                <select name="Cuotas" id="cuotas">
+                    <option value="Seleccionar">Seleccione cantidad de cuotas</option>
+                    <option id="3c" value="3">3 Cuotas</option>
+                    <option id="6c" value="6">6 Cuotas</option>
+                    <option id="12c" value="12">12 Cuotas</option>
+                    <option id="18c" value="18">18 Cuotas</option>
+                </select>
+            </div>
+        </form>
+      </div>
+    <div >
+        <button  onclick="financiacion()"  id="btSolicitar"> 
+            <span> Solicitar</span>
+         </button>
+
+        <button  onclick="agregarPersona()" id="CliRech"> 
+        <span>Clientes Rechazados</span>
+        </button>
+    </div>
         
+    <h2 id="financia"></h2>
+    <h3 id="rechaza"></h3>
+      
+
+    <div class=" contenedor">
+        <div class="elemento">
+            <ul id="personas">
+    
+            </ul>
+        </div>
+    </div>
+
+
+
+
 
 
     </main>
@@ -22,6 +83,8 @@
     <footer>
 
     </footer>
+
+    <script scr="assets/listaClientes.js"></script>
     <script src="assets/pruebaJS.js"></script>
 </body>
 
